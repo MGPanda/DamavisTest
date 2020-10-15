@@ -3,11 +3,27 @@ package control;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-
+/**
+ * The Tools class is where most of the code is executed. Here is where, with the parameters received from the Main
+ * class, every single possibility is tested and eventually returned.
+ * @author Tòfol Martínez
+ *
+ */
 public class Tools {
-	
+	/**
+	 * An array containing all four possible directions in String form.
+	 */
 	private static String[] directions = { "L", "R", "D", "U" };
+	
+	/**
+	 * An empty ArrayList that will be filled and used to test every possible movement by the snake.
+	 */
 	private static ArrayList<String> movements = new ArrayList<String>();
+	
+	/**
+	 * An integer that counts the amount of possible paths by the snake. It's returned to the Main class at the
+	 * end of the program's run.
+	 */
 	private static int counter = 0;
 
 	/**
@@ -135,6 +151,7 @@ public class Tools {
 	 * program itself, I made this method that generates random combinations, checks if they're already on the list,
 	 * and if not, it adds them up to 4^depth (the max amount of combinations).
 	 * @param depth The depth of the movements, used to get the size of the ArrayList.
+	 * @deprecated
 	 */
 //	private static void generateMovements(int depth) {
 //		Random r = new Random();
