@@ -19,7 +19,14 @@ public class Main {
 		int[][] snake = { { 5, 5 }, { 5, 4 }, { 4, 4 }, { 4, 5 }};
 		int depth = 4;
 		
-		System.out.println(String.format("There are %d possible paths in this given case.", Tools.numberOfAvailableDifferentPaths(board, snake, depth)));
+		int paths = Tools.numberOfAvailableDifferentPaths(board, snake, depth);
+		String possibilities = "";
+		
+		if (paths == 0) possibilities = "There are no possible paths in this given case.";
+		else if (paths == 1) possibilities = "There is 1 possible path in this given case.";
+		else possibilities = String.format("There are %d possible paths in this given case.", paths);
+		
+		System.out.println(possibilities);
 	}
 
 }
